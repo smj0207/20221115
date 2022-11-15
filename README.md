@@ -2,36 +2,51 @@
 
 ## 실행화면
 
-![image](https://user-images.githubusercontent.com/97486300/201839772-4f903a1a-ddfc-4ff7-86b5-153202bb5096.png)
+첫페이지는 index입니다
+![image](https://user-images.githubusercontent.com/97486300/201933964-95e6818c-ef02-4269-a3d0-e583330e23f4.png)
 
-유효성검사가 걸려있어 텍스트 박스안에 값이 들어가지 않으면 해당 메세지가 표시된다
+## 백신예약 페이지 입니다 (view)
 
-![image](https://user-images.githubusercontent.com/97486300/201839950-2ddc1d88-b36e-4d54-9cc7-819f294b97cd.png)
+![image](https://user-images.githubusercontent.com/97486300/201939691-0f622693-0127-4424-9bf1-a68d47c9bfb3.png)
 
-## 아래는 유효성검사에 필요한 코드이다
+예약번호는 자동으로 생성됩니다
 
-![image](https://user-images.githubusercontent.com/97486300/201840917-62af0a00-75d1-441b-ae70-da39e2879b46.png)
+![image](https://user-images.githubusercontent.com/97486300/201939997-58557681-265c-42f1-a2c5-2ee58248c90e.png)
 
-## 이제 예약을 했다면 예약 리스트를 확인해보도록 하자
-
-실행화면이다
-
-![image](https://user-images.githubusercontent.com/97486300/201841225-233756e9-147f-4a32-b238-cd42cbf1e714.png)
-
-스트링 형식의 문자열을 생성하여 받아준다
+널값이 있다면 유효성 검사에서 걸러져 예약이 불가합니다
 
 
-![image](https://user-images.githubusercontent.com/97486300/201841675-e157aaf7-145d-47d6-a3ee-f330d17e7a3e.png)
+![image](https://user-images.githubusercontent.com/97486300/201940154-1893a131-5bd7-41e7-90e0-b43cb4e69da9.png)
+
+## 유효성 검사 코드
 
 
-다음은 쿼리문입니다 외부조인으로 필요한 회원정보를 테이블 가져와주는 쿼리문입니다
+![image](https://user-images.githubusercontent.com/97486300/201940407-224e48bb-4bd0-4ced-8ed2-15239c9e2255.png)
 
 
-![image](https://user-images.githubusercontent.com/97486300/201842895-37a45239-65b5-4995-9ed5-ef98a49975b9.png)
+테이블
 
-또한 아래 코드로 받아온 회원정보 보여줍니다 
+![image](https://user-images.githubusercontent.com/97486300/201940761-01d48cb9-1a07-429e-8276-be2d59a86ef4.png)
+
+
+## insert_reservtion (back)
+
+DB에 스트링형식으로 값을 넣어줍니다
+
+
+![image](https://user-images.githubusercontent.com/97486300/201942020-4057b812-b20c-41ef-81ff-f447defc599d.png)
+
+
+## 예약조회 화면입니다 (view)
+
+![image](https://user-images.githubusercontent.com/97486300/201938986-e0b788f6-c50d-4983-ba92-337e30a13883.png)
+
+## saerch_reservation_table (back)
+
+값을 조회하는 코드입니다
+
+!![image](https://user-images.githubusercontent.com/97486300/201941578-8ad1a3a9-7188-4aca-bd21-74462719ebb5.png)
+
+아래는 테이블입니다
 
 ![image](https://user-images.githubusercontent.com/97486300/201843491-b3cd5464-721e-4bfb-bcde-2f7c2813ca21.png)
-
-if문은 번호를 입력받은후 출력시켜줍니다<br>
-그리고 else문을 사용해 테이블에 있는 정보와 일치하지 않는 번호는 걸러냅니다
